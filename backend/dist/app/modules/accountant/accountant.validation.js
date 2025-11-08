@@ -30,7 +30,6 @@ const createAccountantValidationSchema = zod_1.z.object({
             .optional(),
         phone: zod_1.z
             .string()
-            .regex(/^\+?[\d\s\-\(\)]+$/, 'Invalid phone number format')
             .optional(),
         employeeId: zod_1.z
             .string()
@@ -246,7 +245,6 @@ const updateAccountantValidationSchema = zod_1.z.object({
             .optional(),
         phone: zod_1.z
             .string()
-            .regex(/^\+?[\d\s\-\(\)]+$/, 'Invalid phone number format')
             .optional(),
         employeeId: zod_1.z
             .string()

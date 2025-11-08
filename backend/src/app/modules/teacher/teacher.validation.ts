@@ -28,7 +28,6 @@ const createTeacherValidationSchema = z.object({
       .optional(),
     phone: z
       .string()
-      .regex(/^\+?[\d\s\-\(\)]+$/, 'Invalid phone number format')
       .optional(),
     employeeId: z
       .string()

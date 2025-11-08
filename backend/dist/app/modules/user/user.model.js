@@ -71,12 +71,6 @@ const userSchema = new mongoose_1.Schema({
     phone: {
         type: String,
         trim: true,
-        validate: {
-            validator: function (phone) {
-                return !phone || /^\+?[\d\s\-\(\)]+$/.test(phone);
-            },
-            message: "Invalid phone number format",
-        },
     },
     isActive: {
         type: Boolean,

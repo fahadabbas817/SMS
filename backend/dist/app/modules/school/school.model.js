@@ -57,12 +57,6 @@ const contactSchema = new mongoose_1.Schema({
         type: String,
         required: false,
         trim: true,
-        validate: {
-            validator: function (phone) {
-                return !phone || /^\+?[\d\s\-\(\)]+$/.test(phone);
-            },
-            message: 'Invalid phone number format'
-        }
     },
     email: {
         type: String,

@@ -46,7 +46,6 @@ const createUserValidationSchema = zod_1.z.object({
             .optional(),
         phone: zod_1.z
             .string()
-            .regex(/^\+?[\d\s\-\(\)]+$/, 'Invalid phone number format')
             .optional(),
     }),
 });
@@ -79,7 +78,6 @@ const updateUserValidationSchema = zod_1.z.object({
             .optional(),
         phone: zod_1.z
             .string()
-            .regex(/^\+?[\d\s\-\(\)]+$/, 'Invalid phone number format')
             .optional(),
         isActive: zod_1.z
             .boolean()

@@ -26,7 +26,6 @@ const createStudentValidationSchema = zod_1.z.object({
         email: zod_1.z.string().email("Invalid email format").toLowerCase().optional(),
         phone: zod_1.z
             .string()
-            .regex(/^\+?[\d\s\-\(\)]+$/, "Invalid phone number format")
             .optional(),
         grade: zod_1.z
             .string({

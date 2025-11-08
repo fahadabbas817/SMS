@@ -108,7 +108,6 @@ const updateSchoolValidationSchema = zod_1.z.object({
             .optional(),
         phone: zod_1.z
             .string()
-            .regex(/^\+?[\d\s\-\(\)]+$/, 'Invalid phone number format')
             .optional(),
         email: zod_1.z
             .string()

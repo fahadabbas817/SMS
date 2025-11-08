@@ -74,12 +74,6 @@ const userSchema = new Schema<IUserDocument, IUserModel, IUserMethods>(
     phone: {
       type: String,
       trim: true,
-      validate: {
-        validator: function (phone: string) {
-          return !phone || /^\+?[\d\s\-\(\)]+$/.test(phone);
-        },
-        message: "Invalid phone number format",
-      },
     },
     isActive: {
       type: Boolean,

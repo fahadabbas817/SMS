@@ -66,12 +66,6 @@ const contactSchema = new Schema<ISchoolContact>({
     type: String,
     required: false,
     trim: true,
-    validate: {
-      validator: function (phone: string) {
-        return !phone || /^\+?[\d\s\-\(\)]+$/.test(phone);
-      },
-      message: 'Invalid phone number format'
-    }
   },
   email: {
     type: String,

@@ -24,7 +24,6 @@ const createStudentValidationSchema = z.object({
     email: z.string().email("Invalid email format").toLowerCase().optional(),
     phone: z
       .string()
-      .regex(/^\+?[\d\s\-\(\)]+$/, "Invalid phone number format")
       .optional(),
     // Fix: Handle FormData string-to-number conversion for grade
     grade: z
